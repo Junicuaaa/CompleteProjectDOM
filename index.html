@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" type="module" defer></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.css">
+    <title>Virtual Wallet</title>
+</head>
+<body>
+    
+    <div id="container" class="container">
+        <header class="d-flex flex-column justify-content-center align-items-center">
+            <h4>Presupuesto Disponible</h4>
+            <h1></h1>
+            <div class="">
+                <div class="bg-light p-3 d-flex mb-3 justify-content-between rounded align-items-center" style="width: 500px; max-width: 500px; min-width: 500px;">
+                    <h6 class="m-0">INGRESOS</h6>
+                    <div class="">
+                        <h6 class="m-0">$0</h6>
+                        <h6 class="m-0"></h6>
+                    </div>
+                </div>
+                <div class="bg-light p-3 d-flex justify-content-between rounded align-items-center" style="width: 500px; max-width: 500px; min-width: 500px;">
+                    <h6 class="m-0">EGRESOS</h6>
+                    <div class="">
+                        <h6 class="m-0">$0</h6>
+                        <h6 class="m-0"></h6>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class=""> 
+        <form id="mainForm" class="bg-light border border-1 d-flex flex-wrap justify-content-center align-items-center p-2 gap-3">
+            <select class="fs-6" name="type" id="" style="height: 40px; max-height: 40px; min-height: 40px; width: 50px; max-width: 50px; min-width: 50px;">
+                <option value="ingreso" >+</option>
+                <option value="egreso" >-</option>  
+            </select>
+            <input name="despcription" type="text" class="border border-1 rounded" style="height: 40px; max-height: 40px; min-height: 40px;">
+            <input name="amount" type="text" class="border border-1 rounded" style="height: 40px; max-height: 40px; min-height: 40px;">
+            <button id="submit" type="submit" style="height: 40px; max-height: 40px; min-height: 40px;">GUARDAR</button>
+        </form>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-3 bg-light">
+                <table>
+                    <tr>
+                        <th>
+                            INGRESOS
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-3 bg-light">
+                <div>
+
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+</html>
