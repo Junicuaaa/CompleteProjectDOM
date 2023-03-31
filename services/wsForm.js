@@ -1,4 +1,4 @@
-let ws = {
+/* let ws = {
     showData(){
         
     },
@@ -9,4 +9,4 @@ let ws = {
 
     }
 
-}
+} */
