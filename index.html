@@ -11,60 +11,53 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.css">
     <title>Virtual Wallet</title>
 </head>
-<body>
-    
-    <div id="container" class="container">
-        <header class="d-flex flex-column justify-content-center align-items-center">
-            <h4>Presupuesto Disponible</h4>
-            <h1></h1>
-            <div class="">
-                <div class="bg-light p-3 d-flex mb-3 justify-content-between rounded align-items-center" style="width: 500px; max-width: 500px; min-width: 500px;">
-                    <h6 class="m-0">INGRESOS</h6>
-                    <div class="">
-                        <h6 class="m-0">$0</h6>
-                        <h6 class="m-0"></h6>
-                    </div>
-                </div>
-                <div class="bg-light p-3 d-flex justify-content-between rounded align-items-center" style="width: 500px; max-width: 500px; min-width: 500px;">
-                    <h6 class="m-0">EGRESOS</h6>
-                    <div class="">
-                        <h6 class="m-0">$0</h6>
-                        <h6 class="m-0" id="hola"></h6>
-                    </div>
+<body class="bg-dark">
+    <nav class="nav justify-content-between align-items-center p-2 px-5 bg-white">
+        <h2>Your<span class="text-primary">Wallet</span></h2>
+        <h5 class="bg-primary rounded-pill p-2 m-0 ls-1 pt-0 text-white">account</h5>
+    </nav>
+    <div id="container" class="container d-flex justify-content-center align-items-center flex-column py-4">
+        <h2 class="text-white">Wallet</h1>
+        <h2 id="wallet" class="text-white"></h2>
+        <div class="container-fluid text-white">
+            <div class="d-flex justify-content-between align-items-center m-0 p-2 bg-primary rounded mb-3">
+                <h6 class="text-italic">Income</h6>
+                <div class="m-0 d-flex align-items-center gap-1">
+                    <h6 class="m-0">$10000</h6>
+                    <h6 class="badge bg-success m-0">45%</h6>
                 </div>
             </div>
-        </header>
+            <div class="d-flex justify-content-between align-items-center m-0 p-2 bg-danger rounded">
+                <h6 class="text-italic">Expenses</h6>
+                <div class="m-0 d-flex align-items-center gap-1">
+                    <h6 class="m-0">$10000</h6>
+                    <h6 class="badge bg-secondary m-0">45%</h6>
+                </div>
+            </div>
+        </div>
     </div>
     <div class=""> 
-        <form id="mainForm" class="bg-light border border-1 d-flex flex-wrap justify-content-center align-items-center p-2 gap-3">
-            <select class="fs-6" name="type" id="" style="height: 40px; max-height: 40px; min-height: 40px; width: 50px; max-width: 50px; min-width: 50px;">
+        <form id="mainForm" class="bg-secondary d-flex flex-wrap justify-content-center align-items-center p-2 gap-3">
+            <select class="fs-6 rounded" name="type" id="" style="height: 40px; max-height: 40px; min-height: 40px; width: 50px; max-width: 50px; min-width: 50px;">
                 <option value="ingreso" >+</option>
                 <option value="egreso" >-</option>  
             </select>
-            <input name="despcription" type="text" class="border border-1 rounded" style="height: 40px; max-height: 40px; min-height: 40px;">
-            <input name="amount" type="text" class="border border-1 rounded" style="height: 40px; max-height: 40px; min-height: 40px;">
-            <button id="submit" type="submit" style="height: 40px; max-height: 40px; min-height: 40px;">GUARDAR</button>
+            <input name="description" placeholder="Description" type="text" class=" border rounded" style="height: 40px; max-height: 40px; min-height: 40px;">
+            <input name="amount" placeholder="Amount" type="text" class="border rounded" style="height: 40px; max-height: 40px; min-height: 40px;">
+            <button id="submit" type="submit" class="border rounded" style="height: 40px; max-height: 40px; min-height: 40px;">SAVE</button>
         </form>
     </div>
-    <div class="container-fluid">
+    <div class="container mt-2">
         <div class="row">
-            <div class="col"></div>
-            <div class="col-3 bg-light">
-                <table>
-                    <tr>
-                        <th>
-                            INGRESOS
-                        </th>
-                    </tr>
-                </table>
+            <div class="col-12 col-md-6 text-white" id="income">
+                <h5 class="mb-3">Income</h5>
             </div>
-            <div class="col-3 bg-light">
-                <div>
-
-                </div>
-            </div>
-            <div class="col"></div>
+            <div class="col-12 col-md-6 text-white" id="egreso">
+                <h5 class="mb-3">Expenses</h5>
         </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center mt-5">
+        <button class="a textc-center rounded border" type="button">Delete Movements</button>
     </div>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.js"></script>

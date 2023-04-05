@@ -7,7 +7,6 @@ export default {
       (STORAGE === null) ? _ : arr = STORAGE;
     }, {once: true})
     FORM.addEventListener("submit", (e) => {
-      e.preventDefault();
       let data = Object.fromEntries(new FormData(e.target));
       arr.unshift(data)
       localStorage.setItem("formData", JSON.stringify( arr ));
