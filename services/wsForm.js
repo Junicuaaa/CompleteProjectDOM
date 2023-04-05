@@ -1,5 +1,4 @@
 import format from "../Js/formater.js"
-
 let ws = {
     showData(p1){
         // console.log(p1);
@@ -14,11 +13,9 @@ let ws = {
         return `<div class="ingreso d-flex justify-content-between align-items-center px-2 border-bottom"><h6>${p2.description}</h6> <div>$${format.format(p2.amount)}</div></div>`
     },
     egresos(p2){
-        return `<div class="egreso d-flex justify-content-between align-items-center px-2 border-bottom"><h6>${p2.description}</h6> <div>$${format.format(p2.amount)}</div></div>`
+        return `<div class="egreso d-flex justify-content-between align-items-center px-2 border-bottom"><h6>${p2.description}</h6> <div> <button type="button" class="button-delete border rounded">DELETE</button> $${format.format(p2.amount)}</div></div>`
     },
-
 } 
-
 self.addEventListener("message", (e)=>{
     const data = e.data
     postMessage(ws.showData(data))

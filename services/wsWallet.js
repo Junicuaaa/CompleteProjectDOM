@@ -16,7 +16,7 @@ let ws = {
         let negativeTotal = expenses.reduce((a, b) => a + b, 0);
         console.log(negativeTotal);
         wallet = total - negativeTotal;
-        return (format.format(wallet))
+        return ({data: format.format(wallet), total1: format.format(total), total2: format.format(negativeTotal)})
     }
 }
 

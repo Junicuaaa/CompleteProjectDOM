@@ -3,3 +3,4 @@ import wallet from "./Js/wallet.js"
 
 formData.getData();
 wallet.walletAmount();
+
