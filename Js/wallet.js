@@ -10,6 +10,7 @@ export default {
             document.querySelector("#wallet").insertAdjacentHTML("beforeend", e.data.data);
             document.querySelector("#incomeTotal").insertAdjacentHTML("beforeend", e.data.total1);
             document.querySelector("#expensesTotal").insertAdjacentHTML("beforeend", e.data.total2)
+            document.querySelector("#porcentaje1").insertAdjacentHTML("afterbegin", e.data.porcentaje1)
         })
     }
 }

@@ -16,7 +16,8 @@ let ws = {
         let negativeTotal = expenses.reduce((a, b) => a + b, 0);
         console.log(negativeTotal);
         wallet = total - negativeTotal;
-        return ({data: format.format(wallet), total1: format.format(total), total2: format.format(negativeTotal)})
+        let porcentaje = ((negativeTotal * 100)/total);
+        return ({data: format.format(wallet), total1: format.format(total), total2: format.format(negativeTotal), porcentaje1: porcentaje.toFixed(2)})
     }
 }
 
