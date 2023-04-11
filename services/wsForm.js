@@ -15,7 +15,6 @@ let ws = {
     egresos(p2){
         return `<div class="egreso d-flex justify-content-between align-items-center px-2 border-bottom"><h6>${p2.description}</h6> 
         <div>$${format.format(p2.amount)}</div>
-            <label class="button-delete border border-2 rounded-circle p-2 py-1 border-danger text-danger lh-1 bg-white">x</label>
         </div>`
     },
 } 
